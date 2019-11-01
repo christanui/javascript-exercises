@@ -12,8 +12,7 @@ describe("basics", function() {
         it("should run without errors", function() {
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-let someVariable = true
-expect(someVariable).to.equal(true);
+
             ////////////////////////////////////////////////////////////////////
 
             expect(someVariable).to.equal(true);
@@ -23,7 +22,7 @@ expect(someVariable).to.equal(true);
     describe("Some variable declarations are hoisted", function() {
         it("should run without errors", function() {
             expect(someVariable).to.equal(undefined);
-var someVariable = undefined
+
             ////////////////////////////////////////////////////////////////////
             // Declare "someVariable" in way so that the declaration is hoisted.
             // ✏️ ADD CODE HERE ✏️
@@ -37,10 +36,11 @@ var someVariable = undefined
             expect(() => {
                 someVariable; // someVariable should NOT yet be defined here
             }).to.throw("Cannot access 'someVariable' before initialization");
-let someVariable =undefined
+
             ////////////////////////////////////////////////////////////////////
             // Declare "someVariable" in way so that the declaration is NOT hoisted.
             // ✏️ ADD CODE HERE ✏️
+
             ////////////////////////////////////////////////////////////////////
 
             expect(someVariable).to.equal(undefined);
@@ -51,9 +51,7 @@ let someVariable =undefined
         it("should run without errors", function() {
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-var someVariable = undefined;
-typeof someVariable == null
-typeof someVariable ==true
+
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof someVariable).to.equal("undefined");
@@ -72,7 +70,7 @@ typeof someVariable ==true
             // new Number() creates a "primitive wrapper". It's not an actual number, it's an object.
             // In 99.999% of all cases, this is a bug and not actually intended. Fix it! :)
             // ✏️ FIX THAT BUG ✏️
-            const someNumber = 3;
+            const someNumber = new Number(3);
             ////////////////////////////////////////////////////////////////////
 
             // The primitive wrapper passes the loose quality check because it will be casted to a number.
@@ -90,7 +88,7 @@ typeof someVariable ==true
             // write all the zeros.
             // Write it as a string so that the .length property can be checked.
             // ✏️ EDIT NEXT LINE ✏️
-            const bigNumber = "1e9";
+            const bigNumber = "...";
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof bigNumber).to.equal("string");
@@ -107,7 +105,7 @@ typeof someVariable ==true
             // written in way that we don't have to write all the zeros AFTER the point.
             // Write it as a string so that the .length property can be checked.
             // ✏️ EDIT NEXT LINE ✏️
-            const someNumber = "10.";
+            const someNumber = "...";
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof someNumber).to.equal("string");
@@ -124,7 +122,7 @@ typeof someVariable ==true
             // written in way that we don't have to write all the zeros BEFORE the point.
             // Write it as a string so that the .length property can be checked.
             // ✏️ EDIT NEXT LINE ✏️
-            const someNumber = ".2";
+            const someNumber = "...";
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof someNumber).to.equal("string");
@@ -137,7 +135,7 @@ typeof someVariable ==true
         it("should run without errors", function() {
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-var object ={someProperty:1}
+
             ////////////////////////////////////////////////////////////////////
 
             expect(object instanceof Object).to.equal(true);
@@ -153,7 +151,7 @@ var object ={someProperty:1}
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-object.someProperty = undefined
+
             ////////////////////////////////////////////////////////////////////
 
             // object.someProperty is undefined...
@@ -172,7 +170,7 @@ object.someProperty = undefined
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-delete object.someProperty;
+
             ////////////////////////////////////////////////////////////////////
 
             // object.someProperty is undefined...
@@ -189,7 +187,7 @@ delete object.someProperty;
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-const secondArray = firstArray
+
             ////////////////////////////////////////////////////////////////////
 
             expect(secondArray).to.eql([1, 2, 3]);
@@ -211,7 +209,7 @@ const secondArray = firstArray
             ////////////////////////////////////////////////////////////////////
             // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
             // ✏️ ADD CODE HERE ✏️
-const secondArray = firstArray.slice()
+
             ////////////////////////////////////////////////////////////////////
 
             expect(firstArray).to.eql([1, 2, 3]);
@@ -232,7 +230,7 @@ const secondArray = firstArray.slice()
             ////////////////////////////////////////////////////////////////////
             // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
             // ✏️ ADD CODE HERE ✏️
-const longArray =Array(100)
+
             ////////////////////////////////////////////////////////////////////
 
             expect(longArray).to.be.instanceOf(Array);
@@ -249,8 +247,7 @@ const longArray =Array(100)
             // By observing their casting behavior in the tests below, you can find
             // out the required types.
             // ✏️ ADD CODE HERE ✏️
-const firstVariable =3;
-const secondVariable="1"
+
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof firstVariable).to.equal("number");
@@ -267,7 +264,7 @@ const secondVariable="1"
             ////////////////////////////////////////////////////////////////////
             // Can you find a string that casts to `false` in an if() statement?
             // ✏️ ADD CODE HERE ✏️
-const falsyString ="";
+
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof falsyString).to.equal("string");
@@ -284,8 +281,7 @@ const falsyString ="";
             ////////////////////////////////////////////////////////////////////
             // Can you find two different numbers that each cast to `false` in an if() statement?
             // ✏️ ADD CODE HERE ✏️
-const falsyNumber1 = 0;
-const falsyNumber2 =NaN
+
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof falsyNumber1).to.equal("number");
@@ -309,7 +305,7 @@ const falsyNumber2 =NaN
             ////////////////////////////////////////////////////////////////////
             // Can you find a value that is typeof "object" but also casts to `false`?
             // ✏️ ADD CODE HERE ✏️
-const falsyThing = null
+
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof falsyThing).to.equal("object");
@@ -339,7 +335,7 @@ const falsyThing = null
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-propertyName = "secondProperty"
+
             ////////////////////////////////////////////////////////////////////
 
             // That's the same property access as above, but now we get back
@@ -354,8 +350,7 @@ propertyName = "secondProperty"
             // You can create objects that reference themselves.
             // But you need two steps to do it.
             // ✏️ ADD CODE HERE ✏️
-const object = {};
-object.object = object
+
             ////////////////////////////////////////////////////////////////////
 
             expect(object.object).to.equal(object);
